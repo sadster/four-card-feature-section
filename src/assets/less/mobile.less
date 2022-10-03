@@ -1,0 +1,48 @@
+@import '_colors';
+
+@media screen and (max-width: 475px) {
+  @gap: 25px;
+
+  .container {
+    padding: 88px 0;
+  }
+
+  .title {
+    font-size: 25px;
+    word-spacing: -4px;
+  }
+
+  .subtitle {
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+
+  .description {
+    width: 62%;
+    margin-bottom: 75px;
+    line-height: 25px;
+  }
+
+  .wrapper {
+    gap: @gap;
+
+    &-column {
+      row-gap: @gap;
+    }
+  }
+
+  .card {
+    width: 310px;
+    height: 222px;
+
+    &-content {
+      padding: 26px;
+      background-position: right 27px bottom 28px;
+      background-size: 18%;
+    }
+
+    &__title {
+      margin-bottom: 6px;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import '~normalize.css';
+@import '_reset';
+@import '_fonts';
+@import '_colors';
+
+@gap: 30px;
+
+body {
+  background: @gray;
+  color: @blue-dark;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
+  @media screen and (max-height: 780px) {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+.title {
+  margin-bottom: 9px;
+  font-size: 35px;
+  font-weight: 200;
+  word-spacing: 9px;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  font-size: 37px;
+}
+
+.description {
+  width: 44%;
+  margin-bottom: 63px;
+  line-height: 24px;
+  text-align: center;
+  color: @blue-gray;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: @gap;
+  justify-content: center;
+  width: 90%;
+
+  &-column {
+    display: flex;
+    align-items: center;
+    row-gap: @gap;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+  }
+}
+
+.card {
+  width: 350px;
+  height: 250px;
+  padding-top: 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 19px -1px rgba(34, 60, 80, .24);
+
+  &._supervisor {
+    background: @primary-cyan;
+
+    .card-content {
+      background-image: url('../img/icon-supervisor.svg');
+    }
+  }
+
+  &._team {
+    background: @primary-red;
+
+    .card-content {
+      background-image: url('../img/icon-team-builder.svg');
+    }
+  }
+
+  &._karma {
+    background: @primary-orange;
+
+    .card-content {
+      background-image: url('../img/icon-karma.svg');
+    }
+  }
+
+  &._calculator {
+    background: @primary-blue;
+
+    .card-content {
+      background-image: url('../img/icon-calculator.svg');
+    }
+  }
+
+  &-content {
+    height: 100%;
+    padding: 32px;
+    background-color: @white;
+    background-position: right 32px bottom 32px;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 9px;
+    font-size: 20px;
+  }
+
+  &__description {
+    line-height: 24px;
+    color: @blue-gray;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1233px) {
+  .container {
+    height: auto;
+    padding: 45px 0;
+  }
+
+  .wrapper-column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .description {
+    width: 70%;
+  }
+}
+
+@import 'mobile';
